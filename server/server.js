@@ -44,7 +44,7 @@ db.mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
     process.exit();
 })
 
-// require("./routes/auth.routes")(app);
+require("./routes/auth.routes")(app);
 // require("./routes/authCheck.routes")(app);
 
 app.listen(port, () => {
