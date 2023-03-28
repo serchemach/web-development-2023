@@ -45,7 +45,7 @@ db.mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 })
 
 require("./routes/auth.routes")(app);
-// require("./routes/authCheck.routes")(app);
+require("./routes/authCheck.routes")(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
