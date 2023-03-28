@@ -13,7 +13,7 @@ const Message = mongoose.model("Message", new mongoose.Schema({
     }],
 }));
 
-module.export = Message;
+module.exports = Message;
 
 /*
 content 
