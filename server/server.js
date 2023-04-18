@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const port = 3000
+const port = 3001
 
 app.use(cors())
 app.use(express.json())
@@ -46,6 +46,7 @@ db.mongoose.connect(`mongodb://${dbConfig.HOST}:${dbConfig.PORT}/${dbConfig.DB}`
 
 require("./routes/auth.routes")(app);
 require("./routes/authCheck.routes")(app);
+require("./routes/chats.routes")(app);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
